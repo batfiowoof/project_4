@@ -1,0 +1,15 @@
+<div class="inputContainer">
+  <input [(ngModel)]="inputValue" type="text" />
+  <button (click)="addTask()">Add note</button>
+</div>
+
+<div class="tasksContainer">
+  @for (task of tasks; track $index) {
+  <ul>
+    <div class="task">
+      <app-todo-task [inputTask]="task"></app-todo-task>
+      <button (click)="removeTask()">Remove</button>
+    </div>
+  </ul>
+  }
+</div>
