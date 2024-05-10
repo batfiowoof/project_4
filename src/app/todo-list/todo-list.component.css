@@ -36,12 +36,16 @@
   margin-bottom: 10px;
 }
 
+.todo {
+  border: 1px solid #007bff;
+}
+
 .doing {
-  background-color: #ffc107;
+  border: 1px solid #ffc107;
 }
 
 .done {
-  background-color: #28a745;
+  border: 1px solid #28a745;
 }
 .task ul {
   list-style: none;

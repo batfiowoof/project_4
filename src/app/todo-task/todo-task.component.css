@@ -1,0 +1,12 @@
+.todo {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.doing {
+  color: #ffc107;
+}
+
+.done {
+  color: #28a745;
+}
