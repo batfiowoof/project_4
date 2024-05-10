@@ -15,11 +15,19 @@ export class TodoListComponent {
   tasks: any = [];
 
   addTask() {
-    this.tasks.push(this.inputValue);
+    this.tasks.push({
+      id: this.tasks.length,
+      task: this.inputValue,
+      status: 'todo',
+    });
     this.inputValue = '';
   }
 
   removeTask() {
     this.tasks.pop();
+  }
+
+  public statusChange(task) {
+    console.log(task);
   }
 }

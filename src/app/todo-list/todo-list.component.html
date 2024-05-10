@@ -4,10 +4,15 @@
 </div>
 
 <div class="tasksContainer">
-  @for (task of tasks; track $index) {
+  @for (taskObject of tasks; track $index) {
   <ul>
     <div class="task">
-      <app-todo-task [inputTask]="task"></app-todo-task>
+      <app-todo-task
+        [inputTask]="taskObject.task"
+        [inputStatus]="taskObject.status"
+        [inputTaskObject]="taskObject"
+        (onStatusChange)="statusChange($event)"
+      ></app-todo-task>
       <button (click)="removeTask()">Remove</button>
     </div>
   </ul>

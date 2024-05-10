@@ -1,1 +1,11 @@
-<p>todo-task works!</p>
+@if (inputTaskObject.status === 'todo'){
+<div class="task">{{ inputTaskObject.task }}</div>
+} @if (inputTaskObject.status === 'doing'){
+<div class="task doing">{{ inputTaskObject.task }}</div>
+} @if (inputTaskObject.status === 'done'){
+<div class="task done">{{ inputTaskObject.task }}</div>
+}
+
+<button (click)="changeStatus('todo')">TODO</button>
+<button (click)="changeStatus('doing')">DOING</button>
+<button (click)="changeStatus('done')">DONE</button>
